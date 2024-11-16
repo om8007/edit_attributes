@@ -2,7 +2,7 @@ import fiftyone.operators as foo
 import fiftyone.operators.types as types
 import fiftyone.core.labels as fol
 
-IGNORE_ATTRS = ["id", "attributes", "tags"]
+IGNORE_ATTRS = ["id", "tags"]
 
 def get_label(samples, label_dict):
     view = samples.select_labels(ids=[label_dict[0]["label_id"]])
