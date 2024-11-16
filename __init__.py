@@ -48,7 +48,7 @@ class EditLabelAttributes(foo.Operator):
 
         label_dict = ctx.selected_labels
         
-        warning = types.Warning(label=type(label_dict)
+        warning = types.Warning(label=type(label_dict))
         prop = inputs.view("warning", warning)
         prop.invalid = True  # so form's `Execute` button is disabled
         return types.Property(inputs, view=types.View(label="Edit label attributes"))
