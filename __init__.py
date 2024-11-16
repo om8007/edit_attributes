@@ -40,11 +40,11 @@ class EditLabelAttributes(foo.Operator):
             prop.invalid = True  # so form's `Execute` button is disabled
             return types.Property(inputs, view=types.View(label="Edit label attributes"))
 
-        if len(ctx.selected_labels) > 1:
-            warning = types.Warning(label="Labels can only be edited one at a time but %d are selected" % len(ctx.selected_labels))
-            prop = inputs.view("warning", warning)
-            prop.invalid = True  # so form's `Execute` button is disabled
-            return types.Property(inputs, view=types.View(label="Edit label attributes"))
+        # if len(ctx.selected_labels) > 1:
+        #     warning = types.Warning(label="Labels can only be edited one at a time but %d are selected" % len(ctx.selected_labels))
+        #     prop = inputs.view("warning", warning)
+        #     prop.invalid = True  # so form's `Execute` button is disabled
+        #     return types.Property(inputs, view=types.View(label="Edit label attributes"))
 
         label_dict = ctx.selected_labels
 
